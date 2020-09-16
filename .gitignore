@@ -2,3 +2,12 @@
 .Rhistory
 .RData
 .Ruserdata
+.ipynb_checkpoints/prototype4-checkpoint.ipynb
+.ipynb_checkpoints/prototype4-checkpoint.py
+__pycache__/
+build/
+dist/
+facebook_post.png
+images/prototype3.png
+images/protoype3.png
+prototype4.spec
