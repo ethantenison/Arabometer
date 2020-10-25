@@ -1,5 +1,18 @@
-# Sentiment Analysis of Trump & Biden's Tweets 
+# Arab Barometer - COVID Survey App 
+
 
 <br />
 
-Using data from Kaggle and the Trump Twitter Archive, I aim to run a sentiment analyis comparison of Trump and Biden's tweets from Janurary 1, 2020 to August 15, 2020. This period covers one of the most tumulutous times in modern American history when the COVID-19 pandemic began and massive protests erupted accross the United States as a result of the murder of George Floyd in Minneapolis, Minnesota. 
+This project was conducted in conjunction with Princeton University's Arab Barometer and Statistical Netherlands. 
+Originally designed to capture public opinion about fake news in the Middle East, the survey objective goals were changed dramatically as a result of COVID-19. 
+My portion of the project entailed creating an application to create randomized Facebook images to use during the survey. Each time enumerators give the survey
+a different image is displayed with randomized elements including title, author, location, and message. Those variables are then stored in a csv that will be saved along with 
+the respondents survey answers. 
+
+
+<br />
+
+![Example](facebook_post.png)
+
+
+
