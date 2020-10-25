@@ -12,7 +12,23 @@ the respondents survey answers.
 
 <br />
 
-![Example](facebook_post.png)
 
 
+<div id="container">
+    <facebook_post.png/>
+    This is an image
+</div>
+
+
+
+
+#container {
+    height:100px;
+    line-height:100px;
+}
+
+#container img {
+    vertical-align:middle;
+    max-height:100%;
+}
 
