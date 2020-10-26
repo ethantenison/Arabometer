@@ -13,7 +13,7 @@ the respondents survey answers.
 
 ![Example of Randomized Image](facebook_post.png)
 <br />
-
+### How was it created? 
 Two apps were created, one for Windows and one for Android. Virtual environments were used throughout the project to minimize the file size and speed up the execution process. 
 For Windows, the package Pyinstaller was used to convert prototype4.py to prototype4.exe. 
 Once compiled, the exe file is automatically stored in the dist folder. 
@@ -25,4 +25,8 @@ A linux virtual machine was then created using [Digital Ocean](https://www.digit
 After setting up the virtual environment, buildozer was used to convert the necessary files to apk. 
 <br />
 
+
+
+### What should be the results? 
+After the prototype5.apk or prototype4.exe are initialized, they will create two outputs to be used by Blaise, elements_data.csv and facebook_post.png. The image will be displayed during survey administration and the csv will be saved along with the survey responses. 
 
