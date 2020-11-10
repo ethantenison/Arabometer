@@ -1,15 +1,26 @@
-from kivy.app import App
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 import random
 from random import randint
 import pandas as pd
 import os
 import zmq
+import numpy as np
+import io 
+
+from kivy.app import App
+from kivy.uix.label import Label
+from kivy.utils import platform
+from kivy.properties import (StringProperty, ListProperty,
+                             NumericProperty, ObjectProperty,
+                             BooleanProperty)
+from jnius import autoclass
+
 
 class MainApp(App):
 
     def build(self): 
         try:
+                
                     #article images
                     pic1 = Image.open('images/article_photo/pic1.png')
                     pic2 = Image.open('images/article_photo/pic2.png')
@@ -284,6 +295,24 @@ class MainApp(App):
                     #Savings Images and Elements CSV
                     image.save('facebook_post.png')
                     elements_data.to_csv('elements_data.csv', index=False)
+                    
+                    #Making it readable for Blaise team
+                    b = io.BytesIO()
+                    image.save(b, 'png')
+                    im_bytes = b.getvalue()
+                    im_bytes
+                    
+                    csv_string =  elements_data.to_string()
+                    string_bytes = bytes(csv_string, 'utf-8')
+                    
+                    Intent = autoclass('android.content.Intent')
+                    activity = autoclass('org.kivy.android.PythonActivity').mActivity
+                    resultIntent = Intent()
+                    
+                    resultIntent.putExtra("image", im_bytes)
+                    resultIntent.putExtra("string", string_bytes)
+                    
+                    SetResult(Result.Ok, resultIntent);
 
         except IOError: 
             pass
